@@ -1,0 +1,74 @@
+body {
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  text-align: right;
+  margin: 30px;
+}
+
+nav a {
+  margin: 0px 10px;
+  color: #222;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 80px;
+  margin: 120px 0px 20px;
+}
+
+.blue {
+  color: #4285F4;
+}
+
+.red {
+  color: #DB4437;
+}
+
+.yellow {
+  color: #F4B400;
+}
+
+.green {
+  color: #0F9D58;
+}
+
+form {
+  text-align: center;
+}
+
+.search-bar {
+  width: 500px;
+  height: 44px;
+  font-size: 18px;
+  border-radius: 24px;
+  border: 1px solid #dfe1e5;
+  padding: 0px 20px;
+  margin: 20px;
+}
+
+.search-button {
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 4px;
+  color: #5F6368;
+  margin: 20px;
+}
+
+.search-button:hover {
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  color: #222;
+}
