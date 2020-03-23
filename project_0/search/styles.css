@@ -25,6 +25,12 @@ h1 {
   margin: 120px 0px 20px;
 }
 
+h4 {
+  font-weight: normal;
+  /* position: absolute; */
+  text-align: center;
+}
+
 .blue {
   color: #4285F4;
 }
