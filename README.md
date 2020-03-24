@@ -31,4 +31,4 @@ This repo will include my solutions to the projects for the lectures
 
 ## Licence
 
-This project is licensed under the GNU General Public License v3.0 - see [LICENSE](https://github.com/ZaraTam/harvard-cs50/blob/master/LICENSE) for details
+This project is licensed under the GNU General Public License v3.0 - see [LICENSE](https://github.com/ZaraTam/harvard-cs50-web/blob/master/LICENSE) for details
