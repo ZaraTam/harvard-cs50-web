@@ -5,7 +5,7 @@ body {
 
 nav {
   text-align: right;
-  margin: 30px;
+  margin: 25px;
 }
 
 nav a {
@@ -18,6 +18,19 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.nav-left {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav-right {
+  text-align: right;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
 h1 {
   font-weight: normal;
   text-align: center;
@@ -25,44 +38,59 @@ h1 {
   margin: 120px 0px 20px;
 }
 
+h3 {
+  color: #d93025;
+  font-weight: normal;
+}
+
+h3.logo {
+  font-size: 30px;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+
 h4 {
   font-weight: normal;
   text-align: center;
-  margin-left: 195px;
-  margin-top: -30px;
+  margin: -30px 0px 40px 195px;
 }
 
-.blue {
+.divider {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.logo-blue {
   color: #4285F4;
 }
 
-.red {
+.logo-red {
   color: #DB4437;
 }
 
-.yellow {
+.logo-yellow {
   color: #F4B400;
 }
 
-.green {
+.logo-green {
   color: #0F9D58;
 }
 
-form {
-  text-align: center;
-}
-
 .search-bar {
+  display: block;
+  position: relative;
   width: 500px;
   height: 44px;
   font-size: 18px;
   border-radius: 24px;
   border: 1px solid #dfe1e5;
   padding: 0px 20px;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 .search-button {
+  display: block;
+  position: relative;
   width: 120px;
   height: 40px;
   text-align: center;
@@ -71,11 +99,52 @@ form {
   border: 1px solid #f8f8f8;
   border-radius: 4px;
   color: #5F6368;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 .search-button:hover {
   border: 1px solid #c6c6c6;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   color: #222;
+}
+
+.advanced {
+  margin-left: 25px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 6px 20px 6px 0px;
+}
+
+label {
+  font-size: 13px;
+  margin: 20px 0px;
+}
+
+.field {
+  border-radius: 1px;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  font-size: 13px;
+  height: 25px;
+  width: 600px;
+  padding: 1px 8px;
+}
+
+.advanced-button {
+  display: block;
+  width: 120px;
+  height: 30px;
+  background-color: #4d90fe;
+  color: #fff;
+  border: 1px solid #3079ed;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 690px auto;
 }

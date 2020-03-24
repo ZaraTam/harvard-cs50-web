@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav>
+      <table>
+        <tr>
+          <td class="nav-left">
+            <h3 class="logo">
+              <span class="logo-blue">G</span><span class="logo-red">o</span><span class="logo-yellow">o</span><span class="logo-blue">g</span><span class="logo-green">l</span><span class="logo-red">e</span>
+            </h3>
+          </td>
+          <td class="nav-right">
+            <a href="index.html">Google Search</a>
+            <a href="image.html">Image Search</a>
+          </td>
+        </tr>
+      </table>
+    </nav>
+
+    <h3 class="red advanced">Advanced Search</h3>
+    <div class="divider"></div>
+    <p class="advanced">Find pages with...</p>
+
+    <form action="https://google.com/search">
+      <table class="advanced">
+        <tr>
+          <td>
+            <label>all these words:</label>
+          </td>
+          <td>
+            <input class="field" type="text" name="as_q" autofocus="autofocus">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>this exact word or phrase:</label>
+          </td>
+          <td>
+            <input class="field" type="text" name="as_epq">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>any of these words:</label>
+          </td>
+          <td>
+            <input class="field" type="text" name="as_oq">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>none of these words:</label>
+          </td>
+          <td>
+            <input class="field" type="text" name="as_eq">
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <input class="advanced-button" type="submit" value="Advanced Search">
+      </div>
+    </form>
+
+  </body>
+</html>
