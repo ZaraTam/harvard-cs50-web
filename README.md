@@ -18,9 +18,11 @@ https://cs50.harvard.edu/extension/web/2020/spring/
 This repo will include my solutions to the projects for the lectures
 
 - Lecture 0 - HTML and CSS
+    - Project 0
 - Lecture 1 - Git
 - Lecture 2 - Python
 - Lecture 3 - Django
+    - Project 1
 - Lecture 4 - SQL, Models, and Migrations
 - Lecture 5 - JavaScript
 - Lecture 6 - User Interfaces
