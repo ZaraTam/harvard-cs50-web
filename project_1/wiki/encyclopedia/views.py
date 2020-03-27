@@ -13,7 +13,7 @@ def index(request):
     search_query = request.GET.get("q")
 
     if search_query:
-        
+
         search_query_lowercase = search_query.lower()
 
         if search_query_lowercase in entries_lowercase:
@@ -22,9 +22,9 @@ def index(request):
             return entry(request, title)
 
         else:
-            for e in entries_lowercase:
-                if search_query_lowercase in e:
-                    entry_index = entries_lowercase.index(e)
+            for lowercase_entry in entries_lowercase:
+                if search_query_lowercase in lowercase_entry:
+                    entry_index = entries_lowercase.index(lowercase_entry)
                     title = entries[entry_index]
                     matched_entries.append(title)
             return render(request, "encyclopedia/search.html", {
