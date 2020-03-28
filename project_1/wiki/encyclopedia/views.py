@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from random import randint
+from django.shortcuts import redirect, render
 
 from . import util
 
@@ -41,3 +42,17 @@ def entry(request, title):
         "title": title,
         "entry": util.get_entry(title)
     })
+
+
+def random(request):
+
+    entries = util.list_entries()
+    print("len", len(entries))
+
+    random_index = randint(0, len(entries) - 1)
+    print("random_index", random_index)
+
+    random_title = entries[random_index]
+    print("random_title", random_title)
+
+    return redirect("entry", title=random_title)
