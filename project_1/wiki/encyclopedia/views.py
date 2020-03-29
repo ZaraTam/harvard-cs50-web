@@ -54,3 +54,44 @@ def random(request):
     random_title = entries[random_index]
 
     return redirect("entry", title=random_title)
+
+
+def markdown_to_html(entry):
+
+    for line in entry:
+        print(line)
+
+        # Check if line is a heading
+        # h1 = # heading
+        # h2 = ## heading
+
+        h1_heading_pattern = r"^#\s(.*)$"
+        h1_heading_match = re.search(h1_heading_pattern, line)
+        if h1_heading_match:
+            content = re.sub(h1_heading_pattern, "<h1>\g<1></h1>", line)
+            break
+
+        h2_heading_pattern = r"^##\s(.*)$"
+        h2_heading_match = re.search(h2_heading_pattern, line)
+        if h2_heading_match:
+            content = re.sub(h2_heading_pattern, "<h2>\g<1></h2>", line)
+            break
+
+        paragraph_pattern = r"^(.*)$"
+        if not (h1_heading_match and h2_heading_match):
+            content = re.sub(paragraph_pattern, "<p>\g<1></p>", line)
+
+        # Check if line is a list
+        # unordered list = * foo
+        unordered_list_pattern = r"^\*\s(.*)$"
+        content = re.sub(unordered_list_pattern, "<li>\g<1></li>", line)
+
+        # Check if there's bold styling
+        # bold = **foo**
+        bold_pattern = r"\*{2}(.*)\*{2}"
+        content = re.sub(bold_pattern, "<strong>\g<1></strong>", line)
+
+        # Check if there's a link
+        # link = [text](url)
+        link_pattern = r"\[(.*)\]\((.*)\)"
+        content = re.sub(link_pattern, '<a href="\g<2>">\g<1></a>', line)
