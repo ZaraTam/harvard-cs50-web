@@ -8,12 +8,14 @@
     <h1>New page</h1>
 
     <form action="entry.html" method="POST">
+        {% csrf_token %}
         <label style="display: block;">Add new page title:</label>
         <input name="title" type="text" placeholder="Page title">
         <p></p>
-        <label style="display: block;">Add new markdown content:</label>
+        <label style="display: block;">Add new Markdown content:</label>
         <textarea name="content" rows="10" cols="80" placeholder="Markdown content" style="height: auto; width: auto;"></textarea>
         <p></p>
         <input type="submit" value="Submit">
     </form>
+
 {% endblock %}
