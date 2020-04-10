@@ -42,7 +42,7 @@ def index(request):
 def entry(request, title):
     return render(request, "encyclopedia/entry.html", {
         "title": title,
-        "entry": markdown_to_html(util.get_entry(title))
+        "entry": util.get_entry(title)
     })
 
 
@@ -57,7 +57,6 @@ def random(request):
 
 
 def markdown_to_html(entry):
-    print(type(entry))
 
     for line in entry:
         print(line)
