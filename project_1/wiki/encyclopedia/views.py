@@ -46,6 +46,10 @@ def entry(request, title):
     })
 
 
+def new(request):
+    return render(request, "encyclopedia/new.html")
+
+
 def random(request):
 
     entries = util.list_entries()
