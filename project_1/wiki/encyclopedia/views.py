@@ -42,7 +42,7 @@ def index(request):
 def entry(request, title):
     return render(request, "encyclopedia/entry.html", {
         "title": title,
-        "entry": util.get_entry(title)
+        "entry": markdown_to_html(util.get_entry(title))
     })
 
 
@@ -57,6 +57,7 @@ def random(request):
 
 
 def markdown_to_html(entry):
+    print(type(entry))
 
     for line in entry:
         print(line)
@@ -69,13 +70,13 @@ def markdown_to_html(entry):
         h1_heading_match = re.search(h1_heading_pattern, line)
         if h1_heading_match:
             content = re.sub(h1_heading_pattern, "<h1>\g<1></h1>", line)
-            break
+            continue
 
         h2_heading_pattern = r"^##\s(.*)$"
         h2_heading_match = re.search(h2_heading_pattern, line)
         if h2_heading_match:
             content = re.sub(h2_heading_pattern, "<h2>\g<1></h2>", line)
-            break
+            continue
 
         paragraph_pattern = r"^(.*)$"
         if not (h1_heading_match and h2_heading_match):
